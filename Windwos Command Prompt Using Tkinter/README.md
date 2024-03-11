@@ -28,7 +28,7 @@ This is a simple clone of the Windows Command Prompt built using Python built-in
 
 ## Features
 
-    - Supports basic command execution , making and deleting files and directories , checking versions of programs (excluding 'python') , displaying content of files , etc.
+- Supports basic command execution , making and deleting files and directories , checking versions of programs (excluding 'python') , displaying content of files , etc.
 
 ## Limitations
 
