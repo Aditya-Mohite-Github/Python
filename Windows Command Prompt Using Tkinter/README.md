@@ -24,4 +24,4 @@ This is a simple clone of the Windows Command Prompt built using Python and Tkin
 - Python scripts or commands that open new windows or pop-up dialogs may not display correctly or may cause unexpected behavior.
 - Some commands may not produce output or may not work as expected due to differences in environment variables or system configurations.
 - The application does not support advanced features of the Windows Command Prompt, such as redirection, or scripting.
-- piping of python modules work ( updated on 14 March 2024 ) 
+- piping of python modules work but takes time for output window to show output. ( updated on 14 March 2024 ) 
