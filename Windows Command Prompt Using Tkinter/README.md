@@ -15,15 +15,15 @@ This is a simple clone of the Windows Command Prompt built using Python built-in
 
 - Threading Module
 
-    The threading module is used to create and manage threads in Python. In our application, we use threading to execute commands asynchronously, allowing the user interface to remain responsive while commands are being executed in the background.
+    The threading module is used to create and manage threads in Python. In this application, use of threading is done to execute commands asynchronously, allowing the user interface to remain responsive while commands are being executed in the background.
 
 -  OS Module 
 
-    The os module provides a portable way of using operating system-dependent functionality. In our application, we use the os module to interact with the file system, change directories, and handle environment variables.
+    The os module provides a portable way of using operating system-dependent functionality. In this application, use of the os module is done to interact with the file system, change directories, and handle environment variables.
 
 - Subprocess Module 
 
-    The subprocess module allows us to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. In our application, we use subprocess to execute shell commands (some commands cannot be executed in the cmd)and capture their output.
+    The subprocess module allows us to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. In this application, use of subprocess is done to execute shell commands (some commands cannot be executed in the cmd) and capture their output.
 
 
 ## Features
