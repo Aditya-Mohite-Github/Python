@@ -25,7 +25,6 @@ if args.mode == 'location':
     else: print("Location Not Provided")
 elif args.mode == 'current':
     coordinates = locationutils.get_current_location()
-    print(coordinates[0] , coordinates[1])
     weatherandtimeutils.get_forecast_by_coordinates(coordinates[0] , coordinates[1])
 
 

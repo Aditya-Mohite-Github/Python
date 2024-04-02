@@ -87,10 +87,3 @@ def get_forecast_by_location(city):
     else:
         print("Error:", response.status_code)
 
-  
-# Example usage
-# get_forecast_by_location("Mumbai")
-    
-# Example usage
-# get_forecast_by_coordinates(19.0760, 72.8777)  # Mumbai , India coordinates (latitude, longitude)
-# get_forecast_by_coordinates(35.6895, 139.6917)  # Tokyo , Japan coordinates
