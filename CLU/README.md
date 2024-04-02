@@ -2,11 +2,6 @@
 
 This is a simple command-line utility written in Python that provides weather information based on location.
 
-## Features
-
-- Get weather forecast by location name or coordinates 
-- Retrieve current weather for the current location using the `geocoder` module
-
 ## Modules and Technology Used
 
 - Python 3.8 and above
