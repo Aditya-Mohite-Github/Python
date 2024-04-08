@@ -4,7 +4,7 @@ def get_forecast_by_coordinates(latitude, longitude):
     url = "https://weatherapi-com.p.rapidapi.com/forecast.json"
     querystring = {"q": f"{latitude},{longitude}", "days": "3"}
     headers = {
-        "X-RapidAPI-Key": "Your API Key",
+        "X-RapidAPI-Key": "YOUR API KEY",
         "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
     }
 
@@ -47,7 +47,7 @@ def get_forecast_by_location(city):
     url = "https://weatherapi-com.p.rapidapi.com/forecast.json"
     querystring = {"q": city, "days": "3"}
     headers = {
-        "X-RapidAPI-Key": "Your API key",
+        "X-RapidAPI-Key": "YOUR API KEY",
         "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
     }
 
