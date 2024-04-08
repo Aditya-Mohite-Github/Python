@@ -1,30 +1,38 @@
-import argparse
-import weatherandtimeutils
-import locationutils
+# Importing the necessary modules
+import argparse               # Module for parsing command-line arguments
+import weatherandtimeutils    # Custom module for weather and time-related utilities
+import locationutils          # Custom module for location-related utilities
 
+# Creating an ArgumentParser object to handle command-line arguments
 parser = argparse.ArgumentParser()
 
-# 'weather' as a positional argument (mandatory)
+# Adding positional argument 'weather' which is mandatory and will be the main command keyword
 parser.add_argument('weather', help="Main command keyword")
 
-# argument for version
-parser.add_argument('-v', '--version', action='store_true' , help="Outputs the Version of the Application")
+# Adding optional argument for version which triggers the output of application version
+parser.add_argument('-v', '--version', action='store_true', help="Outputs the Version of the Application")
 
-# argument for location for it's weather and current for exact location weather with help of co-ordinates using geocoder in locationutils.py
-parser.add_argument('mode',nargs='?'  ,choices=['location', 'current'], help="Specify mode: 'location' to get weather by coordinates or 'current' to get weather for current location")
-parser.add_argument('locationarg' , nargs='?', help="Argument if location is Entered")
+# Adding argument for mode: 'location' to get weather by coordinates or 'current' to get weather for current location
+parser.add_argument('mode', nargs='?', choices=['location', 'current'], help="Specify mode: 'location' to get weather by coordinates or 'current' to get weather for current location")
 
+# Adding argument for location if 'mode' is 'location'
+parser.add_argument('locationarg', nargs='?', help="Argument if location is Entered")
 
+# Parsing the command-line arguments
 args = parser.parse_args()
 
-if args.version: print("Weather Utility ver 1.1")
+# If version argument is provided, print the version of the application
+if args.version:
+    print("Weather Utility ver 1.2")
 
-if args.mode == 'location':
+# If mode is 'location', check if location argument is provided, and call the respective function accordingly
+elif args.mode == 'location':
     if args.locationarg:
         weatherandtimeutils.get_forecast_by_location(args.locationarg)
-    else: print("Location Not Provided")
+    else:
+        print("Location Not Provided")
+        
+# If mode is 'current', get current coordinates and call the function to get weather forecast by coordinates
 elif args.mode == 'current':
     coordinates = locationutils.get_coordinates()
-    weatherandtimeutils.get_forecast_by_coordinates(coordinates.split(',')[0] , coordinates.split(',')[1])
-
-
+    weatherandtimeutils.get_forecast_by_coordinates(coordinates.split(',')[0], coordinates.split(',')[1])

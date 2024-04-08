@@ -5,8 +5,8 @@ This is a simple command-line utility written in Python that provides weather in
 ## Modules and Technology Used
 
 - Python 3.8 and above
-- [Requests](https://docs.python-requests.org/en/master/): Requests is an elegant HTTP library for Python, written for Python 2.6/2.7 and 3.3+.
-- [Geocoder](https://geocoder.readthedocs.io/en/latest/): Used for getting current location coordinates.
+- [Requests](https://docs.python-requests.org/en/master/)
+- [argparse](https://docs.python.org/3/library/argparse.html)
 - [WeatherAPI.com API](https://rapidapi.com/weatherapi/api/weatherapi-com): Used to get weather forecast by location name or coordinates.
 
 ## Installation and Setup Instructions
@@ -53,3 +53,6 @@ python main.py weather -h
 python main.py weather location London
 python main.py weather current
 ```  
+
+## Updates : 
+- Removed the usecase of 'geocoder' , instead updated 'locationutils.py' with the usecase of 'requests' module for obtaining user's current co-ordinates. Updated on 08 April 2024.
