@@ -1,6 +1,7 @@
-import geocoder
+import requests
 
-def get_current_location():
-    g = geocoder.ip('me')
-    return g.latlng  # Returns a tuple with latitude and longitude
+def get_coordinates():
+    req = requests.get('https://ipinfo.io/')
+    return req.json()['loc']
+    
 
