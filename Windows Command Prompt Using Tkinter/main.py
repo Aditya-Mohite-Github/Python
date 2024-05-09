@@ -41,7 +41,6 @@ def execute_command(event=None):
         threading.Thread(target=run_command, args=(command,)).start()
 
 def run_command(command):
-
      
     try:
         result = subprocess.run(

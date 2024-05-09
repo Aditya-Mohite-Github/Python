@@ -1,5 +1,7 @@
 import requests  # Importing the requests module to make HTTP requests
+from functools import lru_cache
 
+@lru_cache(maxsize=None)
 # Function to get weather forecast by coordinates
 def get_forecast_by_coordinates(latitude, longitude):
     # API endpoint and parameters
@@ -45,6 +47,7 @@ def get_forecast_by_coordinates(latitude, longitude):
     else:
         print("Error:", response.status_code)
 
+@lru_cache(maxsize=None)
 # Function to get weather forecast by location
 def get_forecast_by_location(city):
     # API endpoint and parameters
@@ -77,7 +80,7 @@ def get_forecast_by_location(city):
         current_info = extracted_data.get('current', {})
         dntime = "Night" if current_info.get('is_day') == 0 else "Day"
         Time = location_info.get('localtime' , {})  
-
+ 
         print(
             "\n", "-"*50, "Weather Report", "-"*50, "\n \n"
             f"  Location information:    {location_info.get('name')} , {location_info.get('region')} , {location_info.get('country')}\n \n"
