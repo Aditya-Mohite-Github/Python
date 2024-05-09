@@ -61,9 +61,6 @@ if __name__ == "__main__":
         
         if CheckWin(xState, zState) != -1:
             printBoard(xState, zState)
-            break
-        else:
             print("--Game Drawed--")
-            printBoard(xState, zState)
             break
         
